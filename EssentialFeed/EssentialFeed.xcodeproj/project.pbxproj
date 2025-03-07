@@ -206,10 +206,10 @@
 		3DE9DFC32D70D73300512C85 /* Feed Cache */ = {
 			isa = PBXGroup;
 			children = (
-				3DEDF5452D7B4B2C0023060C /* FeedCachePolicy.swift */,
 				3DDF8AF32D722140008392A9 /* LocalFeedImage.swift */,
 				3DE9DFC42D70D74F00512C85 /* LocalFeedLoader.swift */,
 				3DE9DFC62D70D7EE00512C85 /* FeedStore.swift */,
+				3DEDF5452D7B4B2C0023060C /* FeedCachePolicy.swift */,
 			);
 			path = "Feed Cache";
 			sourceTree = "<group>";
