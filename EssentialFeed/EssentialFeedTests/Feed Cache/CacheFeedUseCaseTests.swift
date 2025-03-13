@@ -42,7 +42,7 @@ class CacheFeedUseCaseTests: XCTestCase {
         sut.save(feed.models) { _ in }
         store.completeDeletionSuccessfully()
 
-        XCTAssertEqual(store.receivedMessages, [.deleteCachedFeed, .insert(feed.Local, timestamp)])
+        XCTAssertEqual(store.receivedMessages, [.deleteCachedFeed, .insert(feed.local, timestamp)])
     }
 
     func test_save_failsOnDeletionError() {
