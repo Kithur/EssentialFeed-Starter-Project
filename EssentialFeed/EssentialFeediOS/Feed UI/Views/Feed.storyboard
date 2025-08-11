@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OCx-bH-A4u">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--My Feed-->
+        <!--Feed View Controller-->
         <scene sceneID="9P8-cp-mpJ">
             <objects>
-                <tableViewController id="iXq-Of-GOt" customClass="FeedViewController" customModule="Prototype" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="iXq-Of-GOt" customClass="FeedViewController" customModule="EssentialFeediOS" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="Nrw-b3-kE2">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -26,7 +26,7 @@
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="FeedImageCell" rowHeight="580" id="KPN-i3-0Gh" customClass="FeedImageCell" customModule="Prototype" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="FeedImageCell" rowHeight="580" id="KPN-i3-0Gh" customClass="FeedImageCell" customModule="EssentialFeediOS" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="66" width="393" height="580"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KPN-i3-0Gh" id="gOk-cn-7a9">
@@ -76,13 +76,25 @@ Location</string>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lyY-oq-rFi">
                                                             <rect key="frame" x="0.0" y="0.0" width="353" height="353"/>
                                                         </imageView>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R9p-3R-CsQ">
+                                                            <rect key="frame" x="0.0" y="0.0" width="353" height="353"/>
+                                                            <state key="normal" title="Button"/>
+                                                            <buttonConfiguration key="configuration" style="plain" title="⟳">
+                                                                <fontDescription key="titleFontDescription" type="system" pointSize="60"/>
+                                                                <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </buttonConfiguration>
+                                                        </button>
                                                     </subviews>
                                                     <color key="backgroundColor" red="0.8901960784313725" green="0.8901960784313725" blue="0.8901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstItem="lyY-oq-rFi" firstAttribute="leading" secondItem="aTy-Gt-BgQ" secondAttribute="leading" id="AY4-qp-ixd"/>
+                                                        <constraint firstItem="R9p-3R-CsQ" firstAttribute="leading" secondItem="aTy-Gt-BgQ" secondAttribute="leading" id="Ck4-VK-bZl"/>
                                                         <constraint firstAttribute="bottom" secondItem="lyY-oq-rFi" secondAttribute="bottom" id="OJc-Tr-yDK"/>
                                                         <constraint firstItem="lyY-oq-rFi" firstAttribute="top" secondItem="aTy-Gt-BgQ" secondAttribute="top" id="UiP-9M-93H"/>
                                                         <constraint firstAttribute="trailing" secondItem="lyY-oq-rFi" secondAttribute="trailing" id="bC0-2a-UVj"/>
+                                                        <constraint firstAttribute="bottom" secondItem="R9p-3R-CsQ" secondAttribute="bottom" id="gPM-Wl-jeA"/>
+                                                        <constraint firstItem="R9p-3R-CsQ" firstAttribute="top" secondItem="aTy-Gt-BgQ" secondAttribute="top" id="lw5-Ex-QJl"/>
+                                                        <constraint firstAttribute="trailing" secondItem="R9p-3R-CsQ" secondAttribute="trailing" id="vh3-hK-nBr"/>
                                                         <constraint firstAttribute="width" secondItem="aTy-Gt-BgQ" secondAttribute="height" multiplier="1:1" id="yV3-DD-AWf"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
@@ -111,13 +123,6 @@ Location</string>
                                         <constraint firstItem="xuO-5t-48G" firstAttribute="trailing" secondItem="gOk-cn-7a9" secondAttribute="trailingMargin" id="nyB-Gj-7gS"/>
                                     </constraints>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="descriptionLabel" destination="i5m-ra-9w2" id="aBC-it-Bij"/>
-                                    <outlet property="feedImageContainer" destination="aTy-Gt-BgQ" id="j4q-2l-vBh"/>
-                                    <outlet property="feedImageView" destination="lyY-oq-rFi" id="neE-qB-D1h"/>
-                                    <outlet property="locationContainer" destination="Vjt-5m-Ge9" id="7RE-Y0-Ehw"/>
-                                    <outlet property="locationLabel" destination="a9x-F9-nhC" id="FFy-HJ-1Sq"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -125,36 +130,14 @@ Location</string>
                             <outlet property="delegate" destination="iXq-Of-GOt" id="nsX-Zp-khh"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="My Feed" id="b0a-ez-vcg"/>
                     <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="fKI-SQ-pPc">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <connections>
-                            <action selector="refresh" destination="iXq-Of-GOt" eventType="valueChanged" id="eaB-rw-Hed"/>
-                        </connections>
                     </refreshControl>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zkS-hN-mAd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-102" y="108"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="6wY-lC-cK8">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OCx-bH-A4u" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Mge-ej-l89">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="iXq-Of-GOt" kind="relationship" relationship="rootViewController" id="jTJ-Py-Vqh"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8JG-OV-wi6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1028" y="108"/>
+            <point key="canvasLocation" x="2015" y="203"/>
         </scene>
     </scenes>
     <resources>
