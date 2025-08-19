@@ -402,16 +402,6 @@ private extension UIButton {
     }
 }
 
-extension UIRefreshControl {
-    func simulatePullToRefresh() {
-        allTargets.forEach { target in
-            actions(forTarget: target, forControlEvent: .valueChanged)?.forEach {
-                (target as NSObject).perform(Selector($0))
-            }
-        }
-    }
-}
-
 private extension FeedViewController {
     func replaceRefreshControlWithFakeForiOSSupport() {
         let fake = FakeRefreshControl()
@@ -439,4 +429,3 @@ private class FakeRefreshControl: UIRefreshControl {
         _isRefreshing = false
     }
 }
-
