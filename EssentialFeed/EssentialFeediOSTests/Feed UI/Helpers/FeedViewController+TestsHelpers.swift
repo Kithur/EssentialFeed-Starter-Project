@@ -1,5 +1,5 @@
 //
-//  FeedUIIntegrationTests+Helpers.swift
+//  FeedViewCotnroller+TestHelpers.swift
 //  EssentialFeed
 //
 //  Created by Luis Roberto Gutiérrez Carbajal on 12/08/25.
