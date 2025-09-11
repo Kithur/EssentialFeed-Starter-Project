@@ -1,0 +1,11 @@
+/* 
+  Feed.strings
+  EssentialFeed
+
+  Created by Luis Roberto Gutiérrez Carbajal on 08/09/25.
+  
+*/
+
+
+"FEED_VIEW_TITLE" = "Meu Feed";
+"FEED_VIEW_CONNECTION_ERROR" = "Não foi possível conectar com o servidor";
