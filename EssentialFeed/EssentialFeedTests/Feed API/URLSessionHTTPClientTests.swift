@@ -86,7 +86,7 @@ class URLSessionHTTPClientTests: XCTestCase {
         let configuration = URLSessionConfiguration.ephemeral
         configuration.protocolClasses = [URLProtocolStub.self]
         let session = URLSession(configuration: configuration)
-        
+
         let sut = URLSessionHTTPClient(session: session)
         trackForMemoryLeaks(sut, file: file, line: line)
         return sut
@@ -132,10 +132,6 @@ class URLSessionHTTPClientTests: XCTestCase {
 
         wait(for: [exp], timeout: 1.0)
         return receivedResult
-    }
-
-    private func anyData() -> Data {
-        return Data("any data".utf8)
     }
 
     private func anyHTTPURLResponse() -> HTTPURLResponse {
