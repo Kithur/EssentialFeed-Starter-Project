@@ -1,0 +1,20 @@
+//
+//  CoreDataStore+FeedImageDataLoader.swift
+//  EssentialFeed
+//
+//  Created by Luis Roberto Gutiérrez Carbajal on 09/12/25.
+//
+
+import Foundation
+
+extension CoreDataFeedStore: FeedImageDataStore {
+
+    public func insert(_ data: Data, for url: URL, completion: @escaping (FeedImageDataStore.InsertionResult) -> Void) {
+
+    }
+
+    public func retrieve(dataForURL url: URL, completion: @escaping (FeedImageDataStore.RetrievalResult) -> Void) {
+        completion(.success(.none))
+    }
+
+}
