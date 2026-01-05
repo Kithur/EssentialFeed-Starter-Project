@@ -9,12 +9,14 @@
     }
   ],
   "defaultOptions" : {
+    "preferredScreenCaptureFormat" : "screenshot",
     "targetForVariableExpansion" : {
       "containerPath" : "container:EssentialApp.xcodeproj",
       "identifier" : "3DE6247C2EE8914800F6D7C1",
       "name" : "EssentialApp"
     },
-    "testExecutionOrdering" : "random"
+    "testExecutionOrdering" : "random",
+    "uiTestingScreenshotsLifetime" : "keepNever"
   },
   "testTargets" : [
     {
