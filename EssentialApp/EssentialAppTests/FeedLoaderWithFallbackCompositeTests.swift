@@ -1,5 +1,5 @@
 //
-//  RemoteWithLocalFallbackFeedLoaderTests.swift
+//  FeedLoaderWithFallbackCompositeTests.swift
 //  EssentialApp
 //
 //  Created by Luis Roberto Gutiérrez Carbajal on 05/01/26.
