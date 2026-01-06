@@ -20,7 +20,7 @@
   },
   "testTargets" : [
     {
-      "parallelizable" : true,
+      "parallelizable" : false,
       "skippedTests" : [
         "EssentialAppTests",
         "EssentialAppTests\/testExample()",
